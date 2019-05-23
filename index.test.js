@@ -8,8 +8,8 @@ describe('Durbanville Calendar Manager', () => {
     beforeAll(() => {
       output = parseGeneralProgramme(testFilePath);
     });
-    test('should be defined', () => {
-      expect(output).toBeDefined();
+    test('should be an Array', () => {
+      expect(Array.isArray(output)).toBeTruthy();
     });
     test('should have length greater than 0', () => {
       expect(output.length).toBeGreaterThan(0);
