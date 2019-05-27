@@ -25,6 +25,8 @@ describe('Durbanville Calendar Manager', () => {
         expect(output.length).toBeGreaterThan(28);
       });
     });
+    test('should be an Array', () => {
+      expect(Array.isArray(output)).toBeTruthy();
     describe('findWeekRowStart', () => {
       test('should should be A3', () => {
        const result = findWeekRowStart(sheet);
