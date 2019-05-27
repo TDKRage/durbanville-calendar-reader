@@ -18,15 +18,13 @@ describe('Durbanville Calendar Manager', () => {
       beforeAll(() => {
         output = parseGeneralProgramme(sheet);
       });
-      test('should be defined', () => {
-        expect(output).toBeDefined();
+      test('should be an Array', () => {
+        expect(Array.isArray(output)).toBeTruthy();
       });
      test.skip('should have more than 28 entries', () => {
         expect(output.length).toBeGreaterThan(28);
       });
     });
-    test('should be an Array', () => {
-      expect(Array.isArray(output)).toBeTruthy();
     describe('findWeekRowStart', () => {
       test('should should be A3', () => {
        const result = findWeekRowStart(sheet);
