@@ -12,7 +12,11 @@ describe('Durbanville Calendar Manager', () => {
     const { SheetNames, Sheets} = readFile(testFilePath);
     const currentMonthSheetName = SheetNames[SheetNames.length-2];
     const sheet = Sheets[currentMonthSheetName]; 
-   
+    
+    console.log('A16', Number.isNaN(' '));
+    // console.log(utils.sheet_to_json(sheet, { blankrows: false, raw: false , header: 1, range: 'A15:B20'}));
+    // console.log(utils.sheet_to_json(sheet, { blankrows: false, raw: false , header: 1, range: 'A36:B40'}));
+
     describe('parseGeneralProgramme', () => {
       let output; 
       beforeAll(() => {
